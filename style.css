@@ -81,51 +81,72 @@ h1, h2, h3 {
     height: 50px;
 }
 
-/* Hero Section */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
 .hero {
     display: flex;
-    background-color: var(--background-color);
+    align-items: flex-start; /* чтобы текст сверху выровнялся */
+    justify-content: flex-start;
     padding: 50px 10%;
-    align-items: center;
-    justify-content: space-between;
+    min-height: 50vh;
+
+    background-image: url("Group 9.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
 }
 
 .hero__left {
-    flex: 1;
+    flex: 0 0 45%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.hero__title {
-    font-size: 3rem;
-    margin-top: 5px;
-    margin-bottom: 0;
-    color: var(--text-dark);
+    justify-content: flex-start;
+    gap: 50px; /* расстояние между "Кондитерская", "Whisked Away" и текстом */
+    z-index: 2;
 }
 
 .hero__subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin: 0;
     color: var(--text-dark);
-    font-size: 1.5rem;
-    margin-top: 5px;
+}
+
+.hero__title {
+    font-family: 'PT Serif', serif;
+    font-size: 5rem;
+    font-weight: 1000;
+    margin: 0;
+    color: var(--text-dark);
 }
 
 .hero__text {
-    max-width: 450px;
-    font-size: 1rem;
-    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 2.0;
+    max-width: 400px;
+    color: var(--text-dark);
 }
 
 .hero__right {
-    flex: 1;
-    text-align: right;
-    position: relative;
+    flex: 0 0 35%; /* увеличили, чтобы картинка была правее */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-left: 200px; /* дополнительный сдвиг от текста */
+    z-index: 2;
 }
 
 .hero__image {
-    max-width: 320px;
+    width: 100%;
+    max-width: 500;
     height: auto;
-    border-radius: 12px;
+    object-fit: contain;
+    border-radius: 0px;
+    z-index: 2;
 }
 
 /* About Section */
@@ -144,9 +165,10 @@ h1, h2, h3 {
 }
 
 .about__image {
-    max-width: 320px;
+    width: 100%;
+    max-width: 450px;
     height: auto;
-    border-radius: 12px;
+    object-fit: contain;
 }
 
 .about__content {
@@ -167,7 +189,7 @@ h1, h2, h3 {
 
 /* Advantages Section */
 .advantages {
-    background-color: #e0e0e0; /* серый фон */
+    background-color: #ffffff; /* серый фон */
     padding: 40px 10%;
     text-align: center;
 }
@@ -287,6 +309,7 @@ h1, h2, h3 {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 15px;
+    padding-left: 20px;
 }
 
 .menu__price {
@@ -515,7 +538,7 @@ h1, h2, h3 {
 .map {
   padding: 80px 10%;
   text-align: center;
-  background: var(--primary-color);
+  background: url(Group\ 11.jpg);
   color: var(--text-light);
 }
 
@@ -602,4 +625,8 @@ h1, h2, h3 {
 #toTop:hover,
 .to-top:hover {
     background: var(--secondary-color);
+}
+
+#contacts {
+  scroll-margin-top: 120px;
 }
